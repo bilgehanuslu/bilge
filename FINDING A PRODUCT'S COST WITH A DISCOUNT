@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float cost;
+    printf("Enter the product's cost: ");
+    scanf("%f", &cost);
+    if(0<cost && cost<100){
+        printf("Product's cost with a discount: %f", cost-(cost*0.1));
+    }else if(100<=cost && cost<500){
+        printf("Product's cost with a discount: %f", cost-(cost*0.15));
+    }else if(500<=cost){
+        printf("Product's cost with a discount: %f", cost-(cost*0.25));
+    }
+    return 0;
+}
