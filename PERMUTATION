@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int findPermutation(int n, int r){
+    int timer=1,x=1,timer2=1,y=1,perm;
+    while(timer<=n){
+        x=timer*x;
+        timer++;
+    }
+    while(timer2<=n-r){
+        y=timer2*y;
+        timer2++;
+    }
+    perm=x/y;
+    return perm;
+}
+int main()
+{
+    int n,r;
+    printf("Enter n value: ");
+    scanf("%d", &n);
+    printf("Enter r value: ");
+    scanf("%d", &r);
+    printf("Permutation of n and r is: %d", findPermutation(n,r));
+
+    return 0;
+}
