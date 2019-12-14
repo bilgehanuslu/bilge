@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,y;
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+    printf("Enter the value of y: ");
+    scanf("%d", &y);
+    if(y<x){
+        printf("%d %% %d = %d", x,y,x%y); // double % is needed because of some compiler rules if you don't get it don't worry about it
+    }else{
+        printf("%d %% %d = %d", y,x,y%x);
+    }
+    return 0;
+}
