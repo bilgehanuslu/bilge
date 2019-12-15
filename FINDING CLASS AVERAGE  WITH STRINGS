@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int scores[20];
+    int i,totalscore=0,n;
+    printf("Enter 20 exam scores: \n");
+    for(i=0; i<=19; i++){
+        printf("%d. score: ", i);
+        scanf("%d", &scores[i]);
+        totalscore+=scores[i];
+    }
+    float x;
+    x=totalscore/20.0;
+    printf("Class average: %f\n", x);
+    printf("Scores higher than average:\n");
+    for(n=0; n<=19; n++){
+        if(scores[n]>x){
+            printf("%d\n", scores[n]);
+        }
+    }
+    return 0;
+}
