@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int first=0,last=0,i,timer=1,total=0;
+    while(first>last || first==last){
+    printf("Enter the first number: ");
+    scanf("%d", &first);
+    printf("Enter the last number: ");
+    scanf("%d", &last);
+    if(last<first || last==first){
+        printf("ERROR!!\n");
+        printf("Last number has to be higher than first number.\n");
+    }else{
+        break;
+    }
+    }
+    printf("-----------------------\n");
+    for(i=first; i<=last; i++){
+        if(i%3==0 || i%11==0){
+            printf("%d ", i);
+            timer++;
+            total+=i;
+        }
+    }
+    printf("\n%d numbers fit the rule.\n", timer);
+    printf("Total of the numbers: %d", total);
+
+    return 0;
+}
