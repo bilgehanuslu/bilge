@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int tarihUret(int adet, int mevsim){
+    int n;
+    switch(mevsim){
+      case 1:
+          srand(time(NULL));
+          for(n=1; n<=adet; n++){
+          printf("%d/", 1+rand()%30);
+          printf("%d/", 3+rand()%3);
+          printf("%d\n", 2019+rand()%51);
+          }
+          break;
+      case 2:
+          srand(time(NULL));
+          for(n=1; n<=adet; n++){
+          printf("%d/", 1+rand()%30);
+          printf("%d/", 9+rand()%3);
+          printf("%d\n", 2019+rand()%51);
+          }
+          break;
+
+    }
+}
+
+int main()
+{
+    int adet;
+    int mevsim;
+    printf("Kac adet tarih uretmek istiyorsunuz? ");
+    scanf("%d", &adet);
+    printf("Hangi mevsim istiyorsunuz? [1-ilkbahar, 2-sonbahar] ");
+    scanf("%d", &mevsim);
+    tarihUret(adet,mevsim);
+    return 0;
+}
