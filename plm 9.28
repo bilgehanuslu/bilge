@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int bahaneUret(int x){
+    printf("Bu isin arkasinda ");
+    switch(x){
+      case 1:
+          printf("Amerika var.");
+          break;
+      case 2:
+          printf("Japonya var.");
+          break;
+      case 3:
+          printf("Ispanya var.");
+          break;
+      case 4:
+          printf("Fransa var.");
+          break;
+      case 5:
+          printf("Rusya var.");
+          break;
+      case 6:
+          printf("Katar var.");
+          break;
+      case 7:
+          printf("Almanya var.");
+          break;
+      case 8:
+          printf("Ingiltere var.");
+          break;
+      case 9:
+          printf("Cin var.");
+          break;
+      case 10:
+          printf("Turkiye var.");
+          break;
+
+    }
+}
+int main()
+{
+    int x;
+    srand(time(NULL));
+    x= 1+rand()%10;
+    bahaneUret(x);
+    return 0;
+}
