@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int islemUret(char islem, int basamak){
+    switch(islem){
+        case '+':
+          if(basamak == 2){
+            srand(time(NULL));
+            printf("%d + %d = ?", 10+rand()%90, 10+rand()%90);
+          }else if(basamak == 3){
+            srand(time(NULL));
+            printf("%d + %d = ?", 100+rand()%900, 100+rand()%900);
+          }
+          break;
+        case '-':
+            if(basamak == 2){
+            srand(time(NULL));
+            printf("%d - %d = ?", 10+rand()%90, 10+rand()%90);
+            }else if(basamak == 3){
+            srand(time(NULL));
+            printf("%d - %d = ?", 100+rand()%900, 100+rand()%900);
+            }
+          break;
+    }
+}
+int main()
+{
+    char islem;
+    int basamak;
+    printf("Yaptirmak istediginiz islemi giriniz: [+ , -]: ");
+    scanf("%c", &islem);
+    printf("Kac basamakli sayilarla calismak istiyorsunuz?[2 && 3] ");
+    scanf("%d", &basamak);
+    if(islem == '+'){
+    islemUret('+', basamak);
+    }
+    else if(islem == '-'){
+    islemUret('-', basamak);
+    }
+    return 0;
+}
