@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int icindeVarMi(int sayi, int wanted){
+    int kontrol;
+    while(0<sayi){
+        kontrol=sayi%10;
+        if(kontrol==wanted){
+            printf("%d sayisi sayinin icinde bulunmaktadir.\n", wanted, sayi);
+            break;
+        }
+        sayi/=10;
+    }
+}
+int main()
+{
+    int sayi,wanted;
+    printf("Sayi: ");
+    scanf("%d", &sayi);
+    printf("Aranilicak sayi: ");
+    scanf("%d", &wanted);
+    icindeVarMi(sayi, wanted);
+    return 0;
+}
