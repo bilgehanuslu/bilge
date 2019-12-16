@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ebobBul(int sayi1, int sayi2){
+    int i,ebob=0;
+    if(sayi1<sayi2){
+        for(i=2; i<=sayi1; i++){
+            if(sayi1%i==0 && sayi2%i==0){
+                printf("Sayilarin ebob'u: %d\n", i);
+            }
+        }
+    }else if(sayi2<sayi1){
+        for(i=2; i<=sayi2; i++){
+            if(sayi1%i==0 && sayi2%i==0){
+                printf("Sayilarin ebob'u: %d\n", i);
+            }
+        }
+    }
+}
+int main()
+{
+    int sayi1,sayi2;
+    printf("1. Sayi: ");
+    scanf("%d", &sayi1);
+    printf("2. Sayi: ");
+    scanf("%d", &sayi2);
+    ebobBul(sayi1,sayi2);
+    return 0;
+}
