@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ekokBul(int sayi1, int sayi2){
+    int i;
+    if(sayi1<sayi2){
+        for(i=sayi1; i<=sayi2*sayi1; i++){
+            if(i%sayi1==0 && i%sayi2==0){
+                printf("Sayinin ekok'u: %d\n", i);
+                break;
+            }
+        }
+    }else if(sayi2<sayi1){
+         for(i=sayi2; i<=sayi1*sayi2; i++){
+            if(i%sayi1==0 && i%sayi2==0){
+                printf("Sayinin ekok'u: %d", i);
+                break;
+            }
+         }
+    }
+}
+int main()
+{
+    int sayi1,sayi2;
+    printf("1. Sayi: ");
+    scanf("%d", &sayi1);
+    printf("2. Sayi: ");
+    scanf("%d", &sayi2);
+    ekokBul(sayi1,sayi2);
+    return 0;
+}
