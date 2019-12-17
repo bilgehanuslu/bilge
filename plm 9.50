@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int kupunuDolduran(int sayi){
+    int toplam=0,dig,kontrol;
+    while(0<sayi){
+        dig=sayi%10;
+        toplam+=dig;
+        sayi=sayi/10;
+    }
+    kontrol= pow(toplam,3);
+    return kontrol;
+}
+int main()
+{
+    int sayi;
+    printf("Sayi: ");
+    scanf("%d", &sayi);
+    if(kupunuDolduran(sayi)== sayi){
+        printf("Kupunu dolduran sayi.");
+    }
+    return 0;
+}
