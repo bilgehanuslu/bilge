@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int buyukTarih(int gun1,int ay1,int yil1,int gun2,int ay2,int yil2){
+    if(yil2<yil1){
+        printf("Buyuk tarih: %d/%d/%d", gun1,ay1,yil1);
+    }else if(yil1<yil2){
+        printf("Buyuk tarih: %d/%d/%d", gun2,ay2,yil2);
+    }else if(ay1<ay2){
+        printf("Buyuk tarih: %d/%d/%d", gun2,ay2,yil2);
+    }else if(ay2<ay1){
+        printf("Buyuk tarih: %d/%d/%d", gun1,ay1,yil1);
+    }else if(gun1<gun2){
+        printf("Buyuk tarih: %d/%d/%d", gun2,ay2,yil2);
+    }else if(gun2<gun1){
+        printf("Buyuk tarih: %d/%d/%d", gun1,ay1,yil1);
+    }
+}
+int main()
+{
+    int gun1,ay1,yil1,gun2,ay2,yil2;
+    printf("Tarih giriniz (G/A/Y): ");
+    scanf("%d%d%d", &gun1, &ay1, &yil1);
+    printf("Tarih giriniz (G/A/Y): ");
+    scanf("%d%d%d", &gun2, &ay2, &yil2);
+    buyukTarih(gun1,ay1,yil1,gun2,ay2,yil2);
+    return 0;
+}
