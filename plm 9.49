@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int mulayimBul(int sayi){
+    int dig,sum,pro,kontrol;
+    sum=0;
+    pro=1;
+    while(0<sayi){
+        dig=sayi%10;
+        sum+=dig;
+        pro*=dig;
+        sayi=sayi/10;
+    }
+    kontrol= sum*pro;
+    return kontrol;
+}
+int main()
+{
+
+    int sayi;
+    for(sayi=100; sayi<=999; sayi++){
+        if(mulayimBul(sayi) == sayi){
+        printf("%d sayisi mulayim sayidir\n", sayi);
+    }
+    }
+
+    return 0;
+}
