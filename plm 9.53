@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float uzaklikBul(int x1,int y1,int x2,int y2){
+    float d;
+    d=(pow((x1-x2),2)+pow((y1-y2),2),0.5);
+    return d;
+}
+int main()
+{
+    int x1,y1,x2,y2;
+    printf("K noktasini giriniz: ");
+    scanf("%d%d", &x1,&y1);
+    printf("M noktasini giriniz: ");
+    scanf("%d%d", &x2,&y2);
+    printf("K ve M arasindaki uzaklik: %f", uzaklikBul(x1,y1,x2,y2));
+    return 0;
+}
