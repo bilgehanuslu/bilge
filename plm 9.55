@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float aciBul(int saat, int dakika){
+      float akrep,yelkovan,a;
+      akrep= saat*60*0.5;
+      yelkovan= dakika*6;
+      if(akrep<yelkovan){
+        a= yelkovan-akrep;
+        return a;
+      }else if(yelkovan<akrep){
+        a= akrep-yelkovan;
+        return a;
+      }else if(yelkovan== akrep){
+        a= akrep-yelkovan;
+        return a;
+      }
+}
+int main()
+{
+    int saat,dakika;
+    printf("Saati giriniz: ");
+    scanf("%d", &saat);
+    printf("Dakikayi giriniz: ");
+    scanf("%d", &dakika);
+    printf("%d:%d 'te akrep ve yelkovan arasindaki aci: %f", saat,dakika,aciBul(saat,dakika));
+    return 0;
+}
