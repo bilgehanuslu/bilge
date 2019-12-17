@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ahbapBul(int sayi){
+    int i,toplam1=0,toplam2=0,kontrol1,n,k,kontrol2;
+    for(i=1; i<=sayi; i++){
+        if(sayi%i==0){
+            toplam1+=i;
+        }
+    }
+    kontrol1= sayi/toplam1;
+    for(n=1; n<sayi; n++){
+        for(k=1; k<=n; k++){
+            if(n%k==0){
+                toplam2+=k;
+            }
+        }
+    }
+    kontrol2= n/toplam2;
+    if(kontrol1==kontrol2){
+        return 1;
+    }else if(kontrol1 != kontrol2){
+        return 0;
+    }
+}
+int main()
+{
+    int sayi;
+    printf("Sayi: ");
+    scanf("%d", &sayi);
+    if(ahbapBul(sayi)==1){
+        printf("%d sayisinin ahbapi vardir.",sayi);
+    }else if(ahbapBul(sayi)==0){
+        printf("%d sayisinin ahbapi yoktur.",sayi);
+    }
+    return 0;
+}
