@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int inOrOut(int x, int y, int xc, int yc, int r){
+    float d;
+    d= sqrt(pow((x-xc),2)+pow((y-yc),2));
+    if(d<=r){
+        return 1;
+    }else if(r<d){
+        return 0;
+    }
+}
+int main()
+{
+    int x,y,xc,yc,r;
+    printf("K noktasini giriniz: ");
+    scanf("%d%d", &x, &y);
+    printf("Cemberin merkez koordinatlarini giriniz: ");
+    scanf("%d%d", &xc, &yc);
+    printf("Cemberin yaricapini giriniz: ");
+    scanf("%d", &r);
+    printf("----------------------------\n");
+    if(inOrOut(x,y,xc,yc,r)==1){
+        printf("Nokta cemberin icindedir.");
+    }else if(inOrOut(x,y,xc,yc,r)==0){
+        printf("Nokta cemberin icinde degildir.");
+    }
+    return 0;
+}
