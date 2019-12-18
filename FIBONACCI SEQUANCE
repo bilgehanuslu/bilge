@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a=1,b=1,c,i,sum=0,dig;
+    printf("How many digits you want to see? ");
+    scanf("%d", &dig);
+    printf("%d %d ", a,b);
+    for(i=3; i<=dig; i++){
+        c=a+b;
+        printf("%d ", c);
+        a=b;
+        b=c;
+    }
+
+    return 0;
+}
