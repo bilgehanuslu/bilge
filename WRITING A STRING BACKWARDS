@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int A[5];
+    int i,j;
+    printf("5 elemanli bir dizi giriniz: ");
+    for(i=0; i<5; i++){
+    scanf("%d", &A[i]);
+    }
+    printf("Dizinin tersten yazilisi: ");
+    for(j=4; 0<=j; j--){
+        printf("%d ", A[j]);
+    }
+    return 0;
+}
