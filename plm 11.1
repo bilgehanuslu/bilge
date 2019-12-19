@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int B[6];
+    int i,j,n;
+    printf("Sayilar: ");
+    for(i=0; i<6; i++){
+        scanf("%d", &B[i]);
+    }
+    for(j=0; j<6; j++){
+        printf("%d ----->", B[j]);
+        for(n=1; n<=B[j]; n++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
