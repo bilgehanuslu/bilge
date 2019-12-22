@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int guess;
+    printf("Enter a number between 1-10.\n");
+    printf("Guessed number: ");
+    scanf("%d", &guess);
+    int x;
+    x= rand()%10;
+    srand(time(NULL));
+    if(x == guess){
+        printf("CONGRATULATIONS YOU WIN !!!");
+    }else if(x != guess){
+        printf("Chin up. Maybe next time. The correct number was %d", x);
+    }
+    return 0;
+}
