@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fib (int i){
+    if(i == 0){
+        return 0;
+    }else if(i == 1){
+        return 1;
+    }else{
+        return fib(i-1)+fib(i-2);
+    }
+}
+int main()
+{
+    int dig,i;
+    printf("How many digits of fibonacci sequance you want to see? ");
+    scanf("%d", &dig);
+    printf("Fibonacci Sequance: ");
+    for(i=1; i<=dig; i++){
+        printf("%d ", fib(i));
+    }
+    return 0;
+}
