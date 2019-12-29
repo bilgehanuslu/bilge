@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num,i,max,min,j;
+    printf("How many number would you like enter: ");
+    scanf("%d", &num);
+    int a[num];
+    for(i=0; i<num; i++){
+        printf("%d. number: ",i+1);
+        scanf("%d", &a[i]);
+    }
+    max=a[0];
+    min=a[0];
+    for(j=0; j<num; j++){
+        if(a[j]>max){
+            max=a[j];
+        }else if(a[j]<min){
+            min=a[j];
+        }
+    }
+    printf("Largest number is: %d\n", max);
+    printf("Smallest number is: %d\n", min);
+    return 0;
+}
