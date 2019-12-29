@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int f1(int a[]){
+    int j;
+    for(j=0; j<5; j++){
+    printf("%d ", a[j]+=5);
+    }
+}
+int main()
+{
+    int i;
+    int a[5];
+    for(i=0; i<5; i++){
+        printf("%d. Number: ", i+1);
+        scanf("%d", &a[i]);
+    }
+    printf("Original list: ");
+    for(i=0; i<5; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\nNot so original list: ");
+    f1(a);
+    return 0;
+}
