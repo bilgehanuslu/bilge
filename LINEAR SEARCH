@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[10]={1,87,96,97,24,35,6,48,10,15};
+    int i,found=0,num;
+    printf("Enter the number to search: ");
+    scanf("%d", &num);
+    for(i=0; i<10; i++){
+        if(a[i]==num){
+            printf("%d found at #%d index", num,i+1);
+            found=1;
+        }
+    }
+    if(!found){
+        printf("%d not found.", num);
+    }
+    return 0;
+}
