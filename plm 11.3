@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a[5];
+    float b[5];
+    int i;
+    printf("A dizisinin elemanlarini giriniz: ");
+    for(i=0; i<5; i++){
+        scanf("%f", &a[i]);
+    }
+    printf("B dizisinin elemanlarini giriniz: ");
+    for(i=0; i<5; i++){
+        scanf("%f", &b[i]);
+    }
+    for(i=0; i<5; i++){
+        printf("%.2f ", a[i]);
+        printf("%.2f ", b[i]);
+    }
+
+    return 0;
+}
