@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,eleman,toplam=0;
+    printf("Kac eleman istiyorsunuz? ");
+    scanf("%d", &eleman);
+    int a[eleman];
+    printf("%d elemanli diziyi giriniz: ",eleman);
+    for(i=0; i<eleman; i++){
+        scanf("%d", &a[i]);
+        toplam+=a[i];
+    }
+    float ort;
+    ort= toplam/eleman;
+    printf("%lf ortalamasindan kucuk olan sayilar: ", ort);
+    for(i=0; i<eleman; i++){
+        if(a[i]<ort){
+            printf("%d ", a[i]);
+        }
+    }
+    return 0;
+}
