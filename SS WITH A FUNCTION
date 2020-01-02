@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int sortItOut(int a[], int x){
+    int j,i,temp;
+    for(i=0; i<x; i++){
+        for(j=i+1; j<x; j++){
+            if(a[j]<a[i]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("\nSorted array: ");
+    for(i=0; i<x; i++){
+        printf("%d ", a[i]);
+    }
+
+}
+int main()
+{
+    int x,i;
+    printf("How many elements you want? ");
+    scanf("%d", &x);
+    int a[x];
+    printf("Enter the array: ");
+    for(i=0; i<x; i++){
+        scanf("%d", &a[i]);
+    }
+    printf("Original array: ");
+    for(i=0; i<x; i++){
+        printf("%d ", a[i]);
+    }
+    sortItOut(a,x);
+
+    return 0;
+}
