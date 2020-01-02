@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int eleman,i,j,temp;
+    printf("Kac eleman istiyorsunuz? ");
+    scanf("%d", &eleman);
+    int a[eleman];
+    printf("%d elemanli diziyi giriniz: ", eleman);
+    for(i=0; i<eleman; i++){
+        scanf("%d", &a[i]);
+    }
+    for(i=0; i<eleman; i++){
+        for(j=i+1; j<eleman; j++){
+            if(a[j]<a[i]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("Sirali dizi: ");
+    for(i=0; i<eleman; i++){
+        printf("%d ", a[i]);
+    }
+    int wanted,low=0,high,mid;
+    high=eleman;
+    printf("\nDizide aramak istediginiz sayiyi giriniz: ");
+    scanf("%d", &wanted);
+    while(low<=high){
+        mid= (low+high)/2;
+        if(wanted<a[mid]){
+            high=mid-1;
+        }else if(a[mid]<wanted){
+            low=mid+1;
+        }else if(wanted == a[mid]){
+            printf("Aradiginiz sayi %d. sirada bulundu", mid+1);
+            break;
+        }
+    }
+    return 0;
+}
