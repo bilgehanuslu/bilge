@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int eleman,i,j,temp;
+    float mid;
+    printf("Eleman sayisini giriniz: ");
+    scanf("%d", &eleman);
+    int a[eleman];
+    printf("Otomatik olusturlmus dizi: ");
+    for(i=0; i<eleman; i++){
+        a[i]= 1+rand()%100;
+        printf("%d ", a[i]);
+    }
+    for(i=0;i<eleman;i++){
+      for(j=i+1;j<eleman;j++){
+         if(a[i]>a[j]){
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
+         }
+      }
+   }
+
+   printf("\nDizinin siralanmis hali: ");
+   for(i=0;i<eleman;i++){
+      printf("%d ", a[i]);
+   }
+   if(eleman%2==0){
+      mid=(a[eleman/2]+a[(eleman+2)/2])/2;
+      printf("\nOrtanca: %f", mid);
+   }else if(eleman%2==1){
+      mid=a[(eleman+1)/2];
+      printf("\nOrtanca: %f", mid);
+   }
+
+
+    return 0;
+}
