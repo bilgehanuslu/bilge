@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,birler,onlar,yuzler,adet=0;
+    for(i=100; i<=999; i++){
+        birler= i%10;
+        onlar= (i/10)%10;
+        yuzler= i/100;
+        if(birler!=onlar && onlar!=yuzler && yuzler!=birler){
+            printf("%d ", i);
+            adet++;
+        }
+    }
+    printf("\n3 basamakli rakamlari farkli toplam %d sayi bulunur.", adet);
+    return 0;
+}
