@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,not[20],toplam=0,max,min;
+    min=100;
+    max=0;
+    printf("20 ogrencinin sinav notunu giriniz: ");
+    printf("\n");
+    for(i=0; i<20; i++){
+        printf("%d. Ogrenci: ",i+1);
+        scanf("%d", &not[i]);
+        toplam+=not[i];
+        if(not[i]<min){
+            min=not[i];
+        }
+        if(max<not[i]){
+            max=not[i];
+        }
+    }
+    float ort= toplam/20;
+    printf("\nNotlarin ortalmasi: %f", ort);
+    printf("\nEn dusuk not: %d", min);
+    printf("\nEn yuksek not: %d", max);
+    return 0;
+}
