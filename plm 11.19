@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int eleman,i,j,temp,wanted;
+    printf("Eleman sayisini giriniz: ");
+    scanf("%d", &eleman);
+    int a[eleman];
+    printf("Random olusturulan dizi: ");
+    srand(time(NULL));
+    for(i=0; i<eleman; i++){
+        a[i]=rand()%100;
+        printf("%d ", a[i]);
+    }
+    for(i=0; i<eleman; i++){
+        for(j=i; j<eleman; j++){
+            if(a[i]>a[j]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("\nDizinin sirali hali: ");
+    for(i=0; i<eleman; i++){
+        printf("%d ", a[i]);
+    }
+    int high=eleman;
+    int low=0;
+    int mid;
+    printf("\nAramak istediginiz sayiyi girin: ");
+    scanf("%d", &wanted);
+    while(low<=high){
+        mid=(low+high)/2;
+        if(wanted<a[mid]){
+            high=mid-1;
+        }else if(a[mid]<wanted){
+            low=mid+1;
+        }else if(a[mid]==wanted){
+            printf("Aradiginiz sayi %d. sirada.", mid+1);
+            break;
+        }
+    }
+    return 0;
+}
