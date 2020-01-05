@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[10]={4,78,96,2,51,63,3,52,0,20};
+    int i,j,wanted,temp;
+    for(i=0; i<10; i++){
+        for(j=i+1; j<10; j++){
+            if(a[i]>a[j]){
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+            }
+        }
+    } //SELECTION SORT VE BINARY SEARCH ORTAYA KARİSİK
+    printf("Sirali dizi: ");
+    for(i=0; i<10; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\nAranacak sayi giriniz: ");
+    scanf("%d", &wanted);
+    int low=0,high=10,mid;
+    while(low<=high){
+        mid=(low+high)/2;
+        if(wanted<a[mid]){
+           high=mid-1;
+        }else if(a[mid]<wanted){
+           low=mid+1;
+        }else if(a[mid]==wanted){
+           printf("Aradiginiz sayi %d. siradadir.", mid+1);
+           break;
+        }
+    }
+    return 0;
+}
