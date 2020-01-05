@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int linearSearch(int a[], int wanted, int x){
+    int i,ctrl=0;
+    for(i=0; i<x; i++){
+        if(a[i]==wanted){
+            printf("Aradiginiz eleman %d. sirada", i+1);
+            ctrl=1;
+        }
+    }
+    if(ctrl==0){
+        printf("%d dizide bulunamadi.", wanted);
+    }
+}
+int main() //LINEAR SEARCH
+{
+    int a[10]={7,95,36,1,45,5,3,88,96,13};
+    int wanted,i;
+    printf("Aramak istediginiz sayi: ");
+    scanf("%d", &wanted);
+    linearSearch(a,wanted,10);
+    return 0;
+}
