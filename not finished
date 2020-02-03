@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[5],i,j,tekrar=0;
+    printf("5 elemanli dizi giriniz.\n");
+    printf("Dizi: ");
+    for(i=0; i<5; i++){
+        scanf("%d", &a[i]);
+    }
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
+            if(a[i]==a[j]){
+                tekrar++;
+            }
+        }
+        printf("Dizide %d sayisi %d defa tekrar etmistir.\n", a[i], tekrar-1);
+    }
+    return 0;
+}
