@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ahbapBul();
+int main()
+{
+    printf("%d\n", ahbapBul(28));
+    //printf("%d\n", ahbapBul(140));
+    return 0;
+}
+int ahbapBul(int sayi){
+    int i,toplam=0,j,toplam2=0,kontrol,kontrol2;
+    for(i=1; i<=sayi; i++){
+        if(sayi%i==0){
+            toplam+=i;
+        }
+    }
+    kontrol= sayi/toplam;
+    for(i=1; i<sayi; i++){
+        for(j=1; j<i; j++){
+            if(i%j==0){
+                toplam2+=j;
+            }
+        }
+    }
+    kontrol2= i/j;
+    if(kontrol==kontrol2){
+        printf("%d ", i);
+    }
+}
