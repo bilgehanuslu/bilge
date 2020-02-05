@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int besEkle(int a[], int eleman){
+    int i;
+    for(i=0; i<eleman; i++){
+        a[i]=a[i]+5;
+        printf("%d ", a[i]);
+    }
+}
+int main()
+{
+    int eleman,i;
+    printf("Eleman sayisi giriniz: ");
+    scanf("%d", &eleman);
+    int a[eleman];
+    printf("Dizi: ");
+    for(i=0; i<eleman; i++){
+        scanf("%d", &a[i]);
+    }
+    besEkle (a,eleman);
+    return 0;
+}
