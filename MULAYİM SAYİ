@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int enBuyukMulayim(int bas){
+    int i,dig=1,top=0,carpim=1,x;
+    for(i=1; i<=bas; i++){
+        if(i!=bas){
+            dig*10;
+        }else if(i==bas){
+            break;
+        }
+    }
+    for(i=dig; i<=(10*dig)-1; i++){
+        while(0<i){
+            x=i%10;
+            top+=x;
+            carpim*=x;
+            i=i/10;
+            if(top*carpim==i){
+                printf("%d", i);
+                break;
+            }
+        }
+    }
+}
+int main()
+{
+    int bas;
+    printf("Basamak sayisi giriniz: ");
+    scanf("%d", &bas);
+    enBuyukMulayim(bas);
+    return 0;
+}
