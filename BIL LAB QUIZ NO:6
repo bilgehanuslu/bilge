@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//BIL LAB QUIZ NO:6
+
+int seriHesapla(int a, int b){
+    int i,x=0,q,toplam=0;
+    printf("Serinin terimleri: ");
+    for(i=0; i<b; i++){
+        q=x*a;
+        printf("%d+ ", factBul(q));
+        x++;
+        toplam+=factBul(q);
+    }
+    printf("\nToplam sonuc: %d", toplam);
+}
+int factBul(int q){
+    int carpim=1;
+    int n=1;
+    while(n<=q){
+        carpim*=n;
+        n++;
+    }
+    return carpim;
+}
+int main()
+{
+    int a,b;
+    printf("a: ");
+    scanf("%d", &a);
+    printf("b: ");
+    scanf("%d", &b);
+    seriHesapla(a,b);
+    return 0;
+}
