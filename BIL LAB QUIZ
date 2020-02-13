@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int usAl(int a, int b, int c){
+    int i,carpim1=1,carpim2=1;
+    for(i=1; i<=b; i++){
+        carpim1*=a;
+    }
+    for(i=1; i<=c; i++){
+        carpim2*=carpim1;
+    }
+    return carpim2;
+}
+int main()
+{
+    int a,b,c;
+    printf("a sayisini giriniz: ");
+    scanf("%d", &a);
+    printf("b sayisini giriniz: ");
+    scanf("%d", &b);
+    printf("c sayisini giriniz: ");
+    scanf("%d", &c);
+    printf("---------------------\n");
+    printf("Fonksiyondan geriye donen deger: %d", usAl(a,b,c));
+    return 0;
+}
