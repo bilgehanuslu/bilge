@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int harshadSayi(int bas, int bitis){
+    int i,dig,toplam=0,adet=0;
+    printf("Harshad sayilar: ");
+    for(i=bas; i<=bitis; i++){
+        while(0<i){
+            dig=i%10;
+            i/=10;
+            toplam+=dig;
+            if(i<=0)
+                break;
+        }
+        if(i%toplam==0){
+            printf("%d, ", i);
+            adet++;
+        }
+    }
+    printf("\n%d ve %d arasinda %d adet rashad sayi vardir.", bas,bitis,adet);
+}
+int main()
+{
+    int bas, bitis;
+    printf("Baslangic sayisini giriniz: ");
+    scanf("%d", &bas);
+    printf("Bitis sayisini giriniz: ");
+    scanf("%d", &bitis);
+    harshadSayi(bas,bitis);
+    return 0;
+}
