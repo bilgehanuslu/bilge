@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int satir,sutun,i,j;
+    printf("Satir sayisi: ");
+    scanf("%d", &satir);
+    printf("Sutun sayisi: ");
+    scanf("%d", &sutun);
+    int matris[satir][sutun];
+    printf("Rastgele olusturulan %dX%d matris:", satir,sutun);
+    printf("\n");
+    srand(time(NULL));
+    for(i=0; i<satir; i++){
+        for(j=0; j<sutun; j++){
+            matris[i][j]=1+rand()%20;
+            printf("%4d", matris[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
