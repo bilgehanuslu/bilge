@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int satir,sutun,i,j;
+    printf("Satir sayisi: ");
+    scanf("%d", &satir);
+    printf("Sutun sayisi: ");
+    scanf("%d", &sutun);
+    int a[satir][sutun];
+    srand(time(NULL));
+    for(i=0; i<satir; i++){
+        for(j=0; j<sutun; j++){
+            a[i][j]=1+rand()%15;
+            printf("%4d", a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Matrisin ters kosegen elemanlari:\n");
+    for(i=0; i<satir; i++){
+        for(j=0; j<sutun; j++){
+            if(i+j==satir-1){
+                printf("%d ", a[i][j]);
+            }
+        }
+    }
+    return 0;
+}
