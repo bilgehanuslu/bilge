@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int satir,sutun,i,j;
+    printf("Satir sayisi: ");
+    scanf("%d", &satir);
+    printf("Sutun sayisi: ");
+    scanf("%d", &sutun);
+    int a[satir][sutun];
+    printf("Matrisi giriniz.\n");
+    for(i=0; i<satir; i++){
+        for(j=0; j<sutun; j++){
+            printf("%dX%d eleman: ", i+1,j+1);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Matris:\n");
+    for(i=0; i<satir; i++){
+        for(j=0; j<sutun; j++){
+            printf(" %d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0; i<satir; i++){
+        for(j=0; j<sutun; j++){
+            if(a[i][j]==a[j][i]){
+                printf("Matris simetriktir.");
+            }
+        }
+    }
+    return 0;
+}
