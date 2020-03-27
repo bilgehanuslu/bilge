@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int seriNoCoz(int *pseri){
+    int no1,no2,no3,dig;
+    no3= *pseri%10;
+    no2= (*pseri/10)%10+((*pseri/100)%10)*10;
+    dig= *pseri/1000;
+    if(dig==1){
+        printf("Arac A blokta %d nolu dairenin %d. aracidir.", no2, no3);
+    }else if(dig==2){
+        printf("Arac B blokta %d nolu dairenin %d. aracidir.", no2, no3);
+    }else if(dig==3){
+        printf("Arac C blokta %d nolu dairenin %d. aracidir.", no2, no3);
+    }else if(dig==4){
+        printf("Arac D blokta %d nolu dairenin %d. aracidir.", no2, no3);
+    }
+}
+int main()
+{
+    int seri;
+    printf("Seri numarasi: ");
+    scanf("%d", &seri);
+    seriNoCoz(&seri);
+    return 0;
+}
