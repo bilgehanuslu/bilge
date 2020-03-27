@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int swap(int *pa, int *pb){
+    int temp;
+    temp= *pa;
+    *pa= *pb;
+    *pb= temp;
+    printf("a: %d ----- b: %d", *pa,*pb);
+
+}
+int main()
+{
+    int a,b;
+    printf("a degerini giriniz: ");
+    scanf("%d", &a);
+    printf("b degerini giriniz: ");
+    scanf("%d", &b);
+    printf("a: %d ----- b: %d\n", a,b);
+    swap(&a,&b);
+    return 0;
+}
