@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int swap(int *psayi){
+    int hafta, gun, saat;
+    hafta= *psayi/168;
+    gun= (*psayi%168)/24;
+    saat= (*psayi%168)%24;
+    printf("%d saat; %d hafta, %d gun, %d saat eder.", *psayi, hafta, gun, saat);
+}
+int main()
+{
+    int sayi;
+    printf("Sureyi giriniz (Saat): ");
+    scanf("%d", &sayi);
+    swap(&sayi);
+    return 0;
+}
