@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int tarihBul(int *psayi){
+    int yil, ay, gun;
+    yil= *psayi/365;
+    ay= (*psayi%365)/30;
+    gun= (*psayi%365)%30;
+    printf("%d gun; %d yil, %d ay, %d gundur.",*psayi,yil,ay,gun);
+}
+int main()
+{
+    int sayi;
+    printf("Gun sayisini giriniz: ");
+    scanf("%d", &sayi);
+    tarihBul(&sayi);
+    return 0;
+}
