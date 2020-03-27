@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int tekCiftSayi(int *psayi){
+    int dig,tek=0,cift=0,orijinal= *psayi;
+    while(1){
+        dig= *psayi%10;
+        if(dig%2==0){
+            cift++;
+        }else if(dig%2==1){
+            tek++;
+        }
+        *psayi= *psayi/10;
+        if(*psayi<=0){
+            break;
+
+        }
+    }
+
+    printf("%d sayisinda %d adet tek, %d adet cift sayi bulunur.\n", orijinal, tek, cift);
+
+}
+int main()
+{
+    int sayi;
+    printf("Sayi: ");
+    scanf("%d", &sayi);
+    tekCiftSayi(&sayi);
+    return 0;
+}
