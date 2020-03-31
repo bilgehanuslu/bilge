@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int bileklikCoz(int *pNum){
+    int cins,hafta,sira;
+    cins= *pNum/10000;
+    hafta= (*pNum/100)%100;
+    sira= *pNum%100;
+    if(cins==1){
+        printf("Cinsiyet (E: Erkek, K: Kiz): E\n");
+        printf("Hafta: %d\n", hafta);
+        printf("Sira: %d", sira);
+    }
+    else if(cins==2){
+        printf("Cinsiyet (E: Erkek, K: Kiz): K\n");
+        printf("Hafta: %d\n", hafta);
+        printf("Sira: %d", sira);
+    }
+}
+int main()
+{
+    int num;
+    printf("Numara: ");
+    scanf("%d", &num);
+    printf("-------------------\n");
+    bileklikCoz(&num);
+    return 0;
+}
