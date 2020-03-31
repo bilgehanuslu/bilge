@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int maxHalka(int *patis){
+    int i,j,sayac=1;
+    int a[*patis];
+    srand(time(NULL));
+    for(i=0; i<*patis; i++){
+        a[*patis]= rand()%10;
+        printf("%d. atisinizin vurdugu halka: %d\n", i+1,a[*patis]);
+    }
+    for(i=0; i<*patis; i++){
+        for(j=0; j<*patis; j++){
+            if(a[i]==a[j]){
+                while(1){
+                    sayac++;
+                }
+                printf("%d halkasi %d kere isabet ettirilmis.\n", a[i],sayac);
+            }
+        }
+        sayac=1;
+    }
+}
+int main()
+{
+    int atis;
+    printf("Toplam kac atis yapilsin? ");
+    scanf("%d", &atis);
+    printf("--------------------------\n");
+    maxHalka(&atis);
+    return 0;
+}
