@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int findCloser(int *x1,int *x2,int *y1,int *y2){
+    float mesafe1= sqrt(pow(*x1-0,2)+pow(*y1-0,2));
+    float mesafe2= sqrt(pow(*x2-0,2)+pow(*y2-0,2));
+    if(mesafe1>mesafe2){
+        printf("%d,%d noktasi orijine daha yakindir.", *x2,*y2);
+    }else if(mesafe2>mesafe1){
+        printf("%d,%d noktasi orijine daha yakindir.", *x1,*y1);
+    }
+}
+int main()
+{
+    int x1,x2,y1,y2;
+    printf("1. noktanin x koordinatini giriniz: ");
+    scanf("%d", &x1);
+    printf("1. noktanin y koordinatini giriniz: ");
+    scanf("%d", &y1);
+    printf("2. noktanin x koordinatini giriniz: ");
+    scanf("%d", &x2);
+    printf("1. noktanin y koordinatini giriniz: ");
+    scanf("%d", &y2);
+    findCloser(&x1,&x2,&y1,&y2);
+    return 0;
+}
