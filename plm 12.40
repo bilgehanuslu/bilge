@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ortalamaYakinBul(int *pa, int *eleman){
+    int i,toplam=0,indis;
+    float fark,min;
+    for(i=0; i<eleman; i++){
+        toplam+= pa[i];
+    }
+    printf("Toplam: %d\n", toplam);
+    float ort= toplam/9;
+    printf("Ortalama: %f\n", ort);
+    min= abs(pa[0]-ort);
+    for(i=0; i<9; i++){
+        fark= fabs(pa[i]-ort);
+        if(fark>min){
+            indis= i;
+        }
+    }
+    printf("%d ortalamaya en yakin elemandir. %d. indiste bulunur.", pa[indis],indis+1);
+
+}
+int main()
+{
+    int a[9]= {9,7,3,4,11,67,25,56,34};
+    int eleman= 9;
+    ortalamaYakinBul(a,9);
+    return 0;
+}
