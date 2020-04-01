@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int age=19;
+    int *pAge= &age;
+    printf("Adress \t \t Name \t Value\n");
+    printf("%p \t %s \t %d\n", &age, "age", age);
+    printf("%p \t %s \t %d\n", pAge, "age", age);
+
+    return 0;
+}
