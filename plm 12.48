@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int say(int *pa, int *pEleman);
+int main()
+{
+    int a[7]={-1, 2, 4, 6, 0, -2, 0};
+    int eleman= 7;
+    say(a,&eleman);
+    return 0;
+}
+int say(int *pa, int *pEleman){
+    int i,ns=0,ps=0,ss=0;
+    for(i=0; i<*pEleman; i++){
+        if(pa[i]<0){
+            ns++;
+        }else if(pa[i]>0){
+            ps++;
+        }else if(pa[i]==0){
+            ss++;
+        }
+    }
+    printf("Negatif sayisi: %d\n", ns);
+    printf("Pozitif sayisi: %d\n", ps);
+    printf("Sifir sayisi: %d\n", ss);
+}
