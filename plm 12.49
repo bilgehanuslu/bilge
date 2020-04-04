@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int ortBul(float *pa, int *pEleman);
+int main()
+{
+    float a[10]={9.80,9.62,1.68,1.62,1.80,1.2,1.82,1.49,1.7,1.5};
+    int eleman=10;
+    ortBul(a,&eleman);
+    return 0;
+}
+int ortBul(float *pa, int *pEleman){
+    int i,kucuk=0,buyuk=0;
+    float toplam=0;
+    for(i=0; i<*pEleman; i++){
+        toplam += pa[i];
+    }
+    printf("Toplam: %.2f\n", toplam);
+    float ort= toplam/10;
+    printf("Ortalama: %.2f\n", ort);
+    for(i=0; i<*pEleman; i++){
+        if(pa[i]<ort){
+            kucuk++;
+        }else if(pa[i]>=ort){
+            buyuk++;
+        }
+    }
+    printf("Ortalamadan buyuk-esit: %d\n", buyuk);
+    printf("Ortalamadan kucuk: %d\n", kucuk);
+}
