@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int sayiBul(int *pa, int *pWanted, int eleman){
+    int i,fark,min,indis;
+    min= abs(pa[0]-(*pWanted));
+    //printf("%d", min);
+    for(i=0; i<eleman; i++){
+        if(pa[i]== *pWanted){
+            printf("\nEn yakin eleman: %d\n", pa[i]);
+            printf("\nIndisi: %d\n",i);
+            break;
+        }else{
+            fark= pa[i]-*pWanted;
+            if(fark<min){
+               min= abs(pa[i]-(*pWanted));
+               indis=i;
+            }
+        }
+    }
+        printf("En yakin eleman: %d", pa[indis]);
+        printf("\nIndisi: %d",indis);
+}
+int main()
+{
+    int a[9]= {9,7,3,4,11,67,25,56,34};
+    int wanted;
+    printf("Aranilacak sayi: ");
+    scanf("%d", &wanted);
+    sayiBul(a,&wanted,9);
+    return 0;
+}
