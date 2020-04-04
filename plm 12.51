@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int findYasli(int *pDaireler, int *pEleman){
+    int i,j,min,indis;
+    for(i=0; i<*pEleman; i++){
+        for(j= i+1; j<*pEleman; j++){
+            if(pDaireler[i]<pDaireler[j]){
+                min= pDaireler[i];
+                indis=i;
+            }
+        }
+        printf("En yasli %d no'lu dairede.\n", indis);
+    }
+
+}
+int main()
+{
+    int daireler[10]={1980,1962,1968,1962,1980,1962,1982,1949,1976,1952};
+    int eleman=10;
+    findYasli(daireler,eleman);
+    return 0;
+}
