@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int yazdir(int *pa, int N){
+    int i;
+    for(i=0; i<N; i++){
+        printf(" %d ", pa[i]);
+    }
+}
+int main()
+{
+    int eleman,i;
+    printf("Dizinin eleman sayisini giriniz: ");
+    scanf("%d", &eleman);
+    int a[eleman];
+    srand(time(NULL));
+    printf("%d elemanli rastgele olusturulmus dizi: \n",eleman);
+    for(i=0; i<eleman; i++){
+        a[i]= 1+rand()%20;
+        printf(" %d ", a[i]);
+    }
+    printf("\n-------------------------\n");
+    yazdir(a,3);
+
+    return 0;
+}
