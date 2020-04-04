@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int topla(int *pd1,int *pd2,int *pEleman){
+    int i;
+    printf("Dizi 3: ");
+    for(i=0; i<*pEleman; i++){
+        printf(" %d ", pd1[i]+pd2[i]);
+    }
+}
+int main()
+{
+    int d1[5]={4,5,3,7,0};
+    int d2[5]={1,1,0,5,6};
+    int eleman=5,i;
+    printf("Dizi 1: ");
+    for(i=0; i<5; i++){
+        printf(" %d ", d1[i]);
+    }
+    printf("\n");
+    printf("Dizi 2: ");
+    for(i=0; i<5; i++){
+        printf(" %d ", d2[i]);
+    }
+    printf("\n");
+    printf("-------------------------\n");
+    topla(d1,d2,&eleman);
+    return 0;
+}
