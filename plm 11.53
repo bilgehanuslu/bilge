@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[3][3];
+    int i,j;
+    int yatay0=0,yatay1=0,yatay2=0;
+    int dikey0=0,dikey1=0,dikey2=0;
+    for(i=0; i<3; i++){
+        printf("a dizisinin %d. satiri: ", i+1);
+        for(j=0; j<3; j++){
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("------------------------------\n");
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++){
+            printf(" %d ", a[i][j]);
+            if(i==0){
+                yatay0+=a[i][j];
+            }
+            if(i==1){
+                yatay1+=a[i][j];
+            }
+            if(i==2){
+                yatay2+=a[i][j];
+            }
+        }
+        if(i==0){
+        printf("  %d", yatay0);
+        }
+        if(i==1){
+        printf("  %d", yatay1);
+        }
+        if(i==2){
+        printf("  %d", yatay2);
+        }
+        printf("\n");
+    }
+    printf("--------\n");
+    for(i=0; i<3; i++){
+        for(j=0; j<3; j++){
+            if(j==0){
+                dikey0+=a[i][j];
+            }
+            if(j==1){
+                dikey1+=a[i][j];
+            }
+            if(j==2){
+                dikey2+=a[i][j];
+            }
+        }
+    }
+    printf(" %d ", dikey0);
+    printf(" %d ", dikey1);
+    printf(" %d ", dikey2);
+
+    return 0;
+}
