@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a[4][3];
+    int i,j,k,swap;
+    printf("Dizinin sirasiz hali:\n");
+    for(i=0; i<4; i++){
+        for(j=0; j<3; j++){
+            scanf("%d", &a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Dizinin sirali hali:\n");
+    for(k=0; k<4; k++){
+        for(i=0; i<3; i++){
+            for(j=i+1; j<3; j++){
+               if(a[k][i] >= a[k][j]){
+                 swap= a[k][i];
+                 a[k][i]= a[k][j];
+                 a[k][j]= swap;
+
+            }
+        }
+    }
+}
+    for(i=0; i<4; i++){
+        for(j=0;j<3; j++){
+            printf("%3d", a[i][j]);
+        }
+          printf("\n");
+    }
+    return 0;
+}
