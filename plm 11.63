@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int a[9][9];
+    int i,j;
+    srand(time(NULL));
+    for(i=0; i<9; i++){
+        for(j=0; j<9; j++){
+            if(i==1){
+                a[i][j]=0;
+                printf(" %.2d ", a[i][j]);
+            }else if(i==4){
+                a[i][j]=0;
+                printf(" %.2d ", a[i][j]);
+            }else if(i==7){
+                a[i][j]=0;
+                printf(" %.2d ", a[i][j]);
+            }else{
+                a[i][j]= 1+rand()%55;
+                printf(" %.2d ", a[i][j]);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
