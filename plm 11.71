@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,j,satir,sutun;
+    int a[6][5]={{'A','J','K','P','U'},{'B','I','L','R','V'},{'C','I','M','S','Y'},{'C','H','N','S','Z'},{'D','G','O','T','.'},{'E','F','O','U','?'}};
+    for(i=0; i<6; i++){
+        for(j=0; j<5; j++){
+            printf(" %c ", a[i][j]);
+        }
+        printf("\n");
+    }
+    int kod[10];
+    printf("--------------------------------------------\n");
+    printf("Sifreli mesajin sayilarini giriniz (10 adet): ");
+    for(i=0; i<10; i++){
+        scanf("%d", &kod[i]);
+    }
+    printf("------------------------------------------\n");
+    printf("Gercek mesaj: ");
+    for(i=0; i<10; i++){
+        satir=(kod[i]/10)-1;
+        sutun=(kod[i]%10)-1;
+        printf("%c", a[satir][sutun]);
+    }
+    return 0;
+}
