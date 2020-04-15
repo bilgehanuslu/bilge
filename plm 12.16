@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int aracSayisi(int *kisi){
+    int sayi,kalan,bos;
+    sayi= *kisi/46;
+    kalan= *kisi%46;
+    if(kalan>0){
+        sayi++;
+    }
+    bos= 46-kalan;
+    printf("Tur icin %d adet araca ihtiyac var.\n", sayi);
+    printf("Turdaki bos koltuk sayisi: %d\n", bos);
+}
+int main()
+{
+    int kisi;
+    printf("Tura kac kisi katilacak?: ");
+    scanf("%d", &kisi);
+    int *pKisi=&kisi;
+    printf("-----------------------\n");
+    aracSayisi(pKisi);
+    return 0;
+}
