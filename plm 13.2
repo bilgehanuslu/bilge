@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char cumle[100];
+    int i,sayi=0;
+    printf("Cumlenizi giriniz: ");
+    gets(cumle);
+    for(i=0; i<100; i++){
+        if(cumle[i]=='a' ||cumle[i]=='A'){
+            sayi++;
+        }
+    }
+    printf("Girdiginiz cumlede %d adet a ya da A vardir.", sayi);
+    return 0;
+}
