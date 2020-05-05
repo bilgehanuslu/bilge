@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char cumle[100];
+    int i,kelime=0;
+    printf("Cumlenizi giriniz: ");
+    gets(cumle);
+    for(i=0; i<100; i++){
+        if(cumle[i]==' '){
+            kelime++;
+        }
+    }
+    printf("Girdiginiz cumle %d kelimeden olusmaktadir.", kelime+1);
+    return 0;
+}
