@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char isimler[5][10];
+    int i;
+    printf("Isim giriniz:\n");
+    for(i=0; i<5; i++){
+        scanf("%s", &isimler[i]);
+    }
+    printf("B ile baslayanlar: \n");
+    for(i=0; i<5; i++){
+        if(isimler[i][0]=='B'){
+            printf("%s\n", isimler[i]);
+        }
+    }
+    return 0;
+}
