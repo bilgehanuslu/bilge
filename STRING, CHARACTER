@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int cumleUzun(char *cumle){
+    int adet=0;
+    while(cumle[adet]!='\0'){
+        adet++;
+    }
+    return adet;
+}
+int main()
+{
+    char cumle[100];
+    int uzunluk,i,sayi=0;
+    printf("Bir cumle yaziniz: ");
+    fgets(cumle,100,stdin);
+    uzunluk= cumleUzun(cumle);
+    printf("Cumle uzunlugu: %d\n", uzunluk);
+    for(i=0; i<=uzunluk; i++){
+        if(cumle[i]=='a'){
+            sayi++;
+            printf("a karakteri %d. siradadir.\n", i+1);
+        }
+    }
+    printf("\nCumlede a harfi %d kere gecmekte.", sayi);
+    return 0;
+}
