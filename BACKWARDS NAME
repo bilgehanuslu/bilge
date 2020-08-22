@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char ad[30];
+    int i,adet=0;
+    printf("Adiniz: ");
+    fgets(ad,30,stdin);
+    printf("Merhaba %s", ad);
+    while(ad[adet]!='\0'){
+        adet++;
+    }
+    printf("Adet: %d",adet);
+    printf("\nIsmin tersten yazilisi: \n");
+    for(i=adet; i>=0; i--){
+        printf("%c", ad[i]);
+    }
+
+    return 0;
+}
