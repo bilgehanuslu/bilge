@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+    char cumle[100];
+    int i,k_s;
+    printf("Cumleyi giriniz: ");
+    fgets(cumle,100,stdin);
+    k_s= strlen(cumle);
+    for(i=0; i<k_s; i++){
+        if(isupper(cumle[i])){
+            printf("%c", tolower(cumle[i]));
+        }else if(islower(cumle[i])){
+            printf("%c", toupper(cumle[i]));
+        }else if(isspace(cumle[i])){
+            printf("%c", cumle[i]);
+        }
+    }
+    return 0;
+}
