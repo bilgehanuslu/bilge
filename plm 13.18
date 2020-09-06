@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+    char isim[5][10];
+    char ara[3]= "an";
+    int i;
+    printf("5 adet isim giriniz:\n");
+    for(i=0; i<5; i++){
+        fgets(isim[i],10,stdin);
+    }
+    printf("Sonu -an olarak biten isimler:\n");
+    for(i=0; i<5; i++){
+        char *sonuc;
+        sonuc=strstr(isim[i],ara);
+        if(sonuc){
+            printf("%s", isim[i]);
+        }
+    }
+
+    return 0;
+}
