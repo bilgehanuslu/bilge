@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle[100];
+    printf("Sentence: ");
+    fgets(cumle,100,stdin);
+    int adet= strlen(cumle);
+    int i,digit=0,alpha=0,special=0;
+    for(i=0; i<adet; i++){
+        if(isdigit(cumle[i])){
+            digit++;
+        }else if(isalpha(cumle[i])){
+            alpha++;
+        }else if(isalnum(cumle[i])==0){
+            special++;
+        }
+    }
+    printf("Number of Alphabets in the string is: %d\n", alpha);
+    printf("Number of Digits in the string is: %d\n", digit);
+    printf("Number of Special characters in the string is: %d\n", special);
+    return 0;
+}
