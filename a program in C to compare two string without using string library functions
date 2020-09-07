@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle1[100], cumle2[100];
+    printf("1. cumleyi giriniz: ");
+    fgets(cumle1,100,stdin);
+    printf("2. cumleyi giriniz: ");
+    fgets(cumle2,100,stdin);
+    int sonuc;
+    sonuc = strcmp(cumle1,cumle2);
+    if(sonuc<0){
+        printf("2. cumle 1. cumleden uzundur.");
+    }else if(sonuc==0){
+        printf("1. cumle ve 2. cumle birbirine esittir.");
+    }else if(sonuc>0){
+        printf("1. cumle 2. cumleden uzundur");
+    }
+    return 0;
+}
