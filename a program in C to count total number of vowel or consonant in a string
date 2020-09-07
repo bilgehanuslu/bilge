@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle[100];
+    printf("Cumle: ");
+    fgets(cumle,100,stdin);
+    int adet= strlen(cumle);
+    int i,sesli=0, sessiz=0;
+    for(i=0; i<adet; i++){
+        if(isalpha(cumle[i])){
+        if(cumle[i]=='a' || cumle[i]=='e' || cumle[i]=='o' || cumle[i]=='u' || cumle[i]== 'i' || cumle[i]=='A' || cumle[i]=='E' || cumle[i]=='O' || cumle[i]=='U' || cumle[i]=='I'){
+            sesli++;
+        }else{
+            sessiz++;
+        }
+        }
+    }
+    printf("The total number of vowel in the string is: %d\n", sesli);
+    printf("The total number of consonant in the string is: %d", sessiz);
+    return 0;
+}
