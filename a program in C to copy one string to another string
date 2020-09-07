@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char destination[100], source[100];
+    printf("Sentence: ");
+    fgets(source,100,stdin);
+    strcpy(destination,source);
+    int num= strlen(source);
+    printf("1st sentence: %s",source);
+    printf("2nd sentence: %s",destination);
+    printf("Number of characters copied: %d\n", num);
+    return 0;
+}
