@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle[100];
+    char kar;
+    int i,j,sayi=0,max=0;
+    printf("Cumle: ");
+    fgets(cumle,100,stdin);
+    for(i=0; i<strlen(cumle); i++){
+        sayi=0;
+        for(j=0; j<strlen(cumle); j++){
+            if(cumle[i]==cumle[j]){
+                sayi++;
+            }
+        }
+        if(max<sayi){
+            max=sayi;
+            kar=cumle[i];
+        }
+    }
+    printf("Cumlede en cok tekrar eden karakter: %c\n", kar);
+    printf("%d kere tekrar etmistir.", max);
+    return 0;
+}
