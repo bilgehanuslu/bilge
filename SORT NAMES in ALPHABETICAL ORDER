@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char isim[6][10];
+    int i,j;
+    printf("6 adet isim giriniz: \n");
+    for(i=0; i<6; i++){
+        fgets(isim[i],10,stdin);
+    }
+    char temp[10];
+    for(i=0; i<5; i++){
+        for(j=i+1; j<6; j++){
+            if(strcmp(isim[i],isim[j])>0){
+                strcpy(temp,isim[i]);
+                strcpy(isim[i],isim[j]);
+                strcpy(isim[j],temp);
+            }
+        }
+    }
+    printf("Alfabetik siraya gore isimler:\n");
+    for(i=0; i<6; i++){
+        printf("%s", isim[i]);
+    }
+    return 0;
+}
