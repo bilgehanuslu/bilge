@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle[100];
+    printf("Cumle: ");
+    fgets(cumle,100,stdin);
+    int i;
+    for(i=0; i<strlen(cumle); i++){
+        if(islower(cumle[i])){
+            printf("%c", toupper(cumle[i]));
+        }else if(isupper(cumle[i])){
+            printf("%c", tolower(cumle[i]));
+        }else if(!isalpha(cumle[i])){
+            printf("%c", cumle[i]);
+        }
+    }
+    return 0;
+}
