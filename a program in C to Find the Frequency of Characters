@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle[100],kar;
+    int i,adet=0;
+    printf("Input the string: ");
+    fgets(cumle,100,stdin);
+    printf("Input the character to find frequency: ");
+    scanf("%c", &kar);
+    for(i=0; i<strlen(cumle); i++){
+        if(cumle[i]== kar){
+            adet++;
+        }
+    }
+    printf("The frequency of '%c' is: %d.", kar,adet);
+    return 0;
+}
