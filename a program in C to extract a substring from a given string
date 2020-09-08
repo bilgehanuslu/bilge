@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char cumle[100];
+    int bas,uz,i;
+    printf("Sentence: ");
+    fgets(cumle,100,stdin);
+    printf("Input the position to start extraction: ");
+    scanf("%d", &bas);
+    printf("Input the length of substring: ");
+    scanf("%d", &uz);
+    printf("The substring retrieve from the string is: ");
+    for(i=bas-1; i<bas+uz; i++){
+        printf("%c", cumle[i]);
+    }
+    return 0;
+}
